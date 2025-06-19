@@ -30,6 +30,6 @@ jq \
   '.ClientSettings.poolAddress = $poolAddress | .ClientSettings.accessToken = $accessToken | .ClientSettings.xmrSettings = {disable: true, enableGpu: false, poolAddress: "stratum+tcp://xmr.nevermine.io:3333", binaryName: null} | .ClientSettings.idling = {command: "./qli-worker-XMR", arguments: "-a rx/0 --url stratum+tcp://xmr.nevermine.io:3333"}' \
   appsettings.json > tmp.json && mv tmp.json appsettings.json
 
-chmod +x ./$qli-Client
+chmod +x ./$executableName
 chmod +x ./qli-worker-XMR
-./$qli-Client
+./$executableName
